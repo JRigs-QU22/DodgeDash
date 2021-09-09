@@ -29,12 +29,12 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKey(KeyCode.R)) //if r is pressed
         {
-            SceneManager.LoadScene("SampleScene"); //reset level
+            SceneManager.LoadScene("DodgeDash"); //reset level
         }
 
         if (health <= 0) //if health is lower or equal to zero
         {
-            SceneManager.LoadScene("SampleScene"); //reset scene
+            SceneManager.LoadScene("DodgeDash"); //reset scene
         } 
     }
 

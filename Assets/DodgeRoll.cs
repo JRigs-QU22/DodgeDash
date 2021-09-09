@@ -28,7 +28,7 @@ public class DodgeRoll : MonoBehaviour
             if(Candash == true && Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.Space)) //press space and left arrow at the same time
             {
                 tag = "NoHit"; //change player tag to stop damage
-                transform.Translate(2, 0, 0); //move forward 2 spaces on x axis
+                transform.Translate(-2, 0, 0); //move 2 spaces left on x axis
                 Candash = false; //disable dash
                 cooldown.text = "Dash Not Available"; //change text
 
@@ -36,7 +36,7 @@ public class DodgeRoll : MonoBehaviour
             if (Candash == true && Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.Space)) //press space and right arrow at the same time
             {
                 tag = "NoHit"; //change player tag to stop damage
-                transform.Translate(2, 0, 0); //move forward 2 spaces on x axis
+                transform.Translate(2, 0, 0); //move 2 spaces right on x axis
                 Candash = false; //disable dash
                 cooldown.text = "Dash Not Available"; //change text
 
@@ -57,8 +57,4 @@ public class DodgeRoll : MonoBehaviour
         }
     }
 
-    public void waitTime() //void for wait time, UNUSED
-    {
-       WaitTime -= Time.deltaTime;
-    }
 }
